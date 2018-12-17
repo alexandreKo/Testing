@@ -1,0 +1,72 @@
+
+// Sample of automation script in Java using Selenium Web Driver to validate 'Addition' function of calculator
+// Created by Alex Kochlan on Dec 17, 2018 but not run and debug it
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.junit.Assert;
+import java.net.URL;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+
+public class calculatorTest {
+    public static WebDriver driver = null;
+    public static String url = "http://jsbin.com/hudape/1/";
+    public static String chromedriverPath = "C:/chromedriver.exe";
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+	
+	// Calculate the sum of num1 and num2
+	    String num1 = "5";
+		String num2 = "6";
+		String Sum = "11";
+	
+	//Create a instance of ChromeOptions class
+        ChromeOptions options = new ChromeOptions();
+
+        //Add chrome switch to disable notification - "--disable-notifications"
+        options.addArguments("--disable-notifications");
+		
+        //Set path for driver exe
+        System.setProperty("webdriver.chrome.driver", chromedriverPath);
+		
+        //Pass ChromeOptions instance to ChromeDriver Constructor
+        driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.navigate().to(url);
+		
+	// Validate 'Addition' functionality
+	
+	// Locate web element for Input
+	    WebElement input = driver.findElement(By.cssSelector(".inputs"));
+	 // Create list of all inputs or enter singe number i.e. 5
+	    input.findElement(By.xpath("//button[@value=num1]")).click();
+	    
+     // Click on 'PLUS' button
+		 driver.findElement(By.xpath("//button[@class='operation' and @value='+']")).click();
+		
+     // Enter another number i.e. "6"
+	    inputField.findElement(By.xpath("//button[@value=num2]")).click();
+		
+	 // Click on EQ button to get SUM	
+	    driver.findElement(By.xpath("//button[@class='operation' and @value='=']")).click();
+		
+	// Assert the result of addition
+	    WebElement output = driver.findElement(By.xpath("//div[@id='output']"));
+		String total = output.getText();
+		Assert.assertEquals(Sum, total);
+
+    // Close browser session
+       driver.close();
+       driver.quit();	   
+	
+	}
+	
+	
+}	

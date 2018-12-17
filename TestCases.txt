@@ -1,0 +1,123 @@
+BASIC OPERATIONAL TESTS:
+
+TEST CASE 1: Check if all the numbers are working ( 0 to 9)
+TEST CASE 2: Check if the arithmetic keys ( PLUS, MINUS, MULT, DIV, EQ) are working.
+TEST CASE 3: Check if the equals button (EQ) is working.
+TEST CASE 4: Check if the clear key (DEL) is working.
+TEST CASE 5: Verify that on pressing two operators one after the other, the latest one will override the previous operator. FAILED.
+TEST CASE 6: Verify MAX number to display on calculator screen 
+
+FUNCTIONALITY TEST CASES:
+
+TEST CASE 1: ADDITION
+
+Description: Check the addition of two integer numbers.
+
+Pre-requisition: Basic Operational Tests are passed successfully.
+
+
+#  |  Step Description                           | Expected Result                        |   Actual Result |
+
+1  | Select number and click on it ( i.e. 5 )    |   number "5" displayed                 |  ---||----      |
+2  | Click on PLUS button                        |      '5+' displayed                    |  ---||----      |
+3  | Select another number and click on it ( '6')|  '5+6' displayed                       | ---||----       |
+4  | Click on EQ button                          |  number '11' displayed in output field |  ---||----      |
+
+
+
+
+TEST CASE 2: SUBTRACTION
+
+Description: Check the subtraction of two integer numbers.
+
+Pre-requisition: Basic Operational Tests are passed successfully.
+
+
+#  |  Step Description                           | Expected Result                        |   Actual Result |
+
+1  | Select number and click on it ( i.e. 8 )    |   number "8" displayed                 |  ---||----      |
+2  | Click on MINUS button                       |       '8-' displayed                   |  ---||----      |
+3  | Select another number and click on it ( '7')|  '8-7' displayed                       | ---||----       |
+4  | Click on EQ button                          |  number '1' displayed in output field  |  ---||----      |  
+
+
+
+TEST CASE 3: MULTIPLICATION
+
+Description: Check the multiplication of two integer numbers.
+
+Pre-requisition: Basic Operational Tests are passed successfully.
+
+
+#  |  Step Description                           | Expected Result|   Actual Result |
+
+1  | Select number and click on it ( i.e. 4 )    |   number "4" displayed                  |  ---||----      |
+2  | Click on MULT button                        |      '4*' displayed                     |  ---||----      |
+3  | Select another number and click on it ( '4')|  '4*4' displayed                        | ---||----       |
+4  | Click on EQ button                          |  number '16' displayed in output field  |  ---||----      |   
+
+
+TEST CASE 4: Division
+
+Description:Check the division of two integer numbers.
+
+Pre-requisition: Basic Operational Tests are passed successfully.
+
+
+#  |  Step Description                           | Expected Result                         |   Actual Result |
+
+1  | Select number and click on it ( i.e. 9 )    |   number "9" displayed                  |  ---||----      |
+2  | Click on DIV button                         |       '9/' displayed                    |  ---||----      |
+3  | Select another number and click on it ( '3')|  '9/3' displayed                        | ---||---- 
+4  | Click on EQ button                          |  number '3' displayed in output field   |  ---||----      |   
+
+
+
+TEST CASE 5: Division of zero ( negative test)
+
+Description: Check the division of a number by zero.
+
+Pre-requisition: Basic Operational Tests are passed successfully.
+
+
+#  |  Step Description              | Expected Result                  |   Actual Result |
+
+1    Enter '5'                      |   '5' is displayed on screen     |
+2    Click division sign            |  '5/'is displayed                |
+3    enter '0'                      |'5/0' is displayed                |
+4    Click on 'EQ'                  | Should displayed an error message| 'Infinity' is displayed
+                                      Undefined or ERR                 
+
+TEST CASE 6: DELETE BUTTON
+
+Description: Check the delete button function of calculator.
+
+Pre-requisition: Basic Operational Tests are passed successfully.
+
+
+#  |  Step Description                           | Expected Result                        |   Actual Result |
+
+1  | Select number and click on it ( i.e. 5 )    |   number "5" displayed                 |  ---||----      |
+2  | Click on DEL button                         | number is deleted from input field     |  ---||----      |
+
+	            
+
+TEST CASE 7: Complex calculation
+
+Description: Check the priority of arithmetic calculation .
+
+Pre-requisition: Basic Operational Tests are passed successfully.
+
+
+#  |  Step Description                                       | Expected Result|   Actual Result |           |
+
+1  | Click on '6', 'PLUS', '8', '0', 'DIV', '3', 'MINUS', '2'| '6+8*0/3-2'    | '6+8*0/3-2'     |           |
+
+2  |  Click on 'EQ'                                          |   '4' is displayed on screen     |    "4"    |                                     									   
+                      
+
+
+
+
+
+

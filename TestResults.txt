@@ -1,0 +1,48 @@
+                                              TEST SUMMARY REPORT.
+
+Tests completed by Alexsandre Kochlan
+Test completed on Dec 17, 2018.
+
+                                               TESTING SCOPE. 
+
+we can come up with plenty of test cases in order to test calculator based on the mathamatical computation. 
+However, we are testing the calculator to see if it is fit for consumer use. So we have to make sure 
+that it fits for the most obvious tests. If those tests are passed then we can safely assume that product is fit for use.
+
+In Scope:
+
+Functional Testing for the following function are in Scope of Testing
+
+- Basic Operation
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Priority arithmatic calculation
+
+Out of Scope:
+
+- A functionality verification which needs connectivity to a third party application cannot be tested, as the connectivity
+could not be established due to some technical limitations.
+- Performance Testing was not done for this application.
+
+                                                   METRICS.
+
+a) No. of test cases planned vs executed
+b) No. of test cases passed/failed
+
+______________________________________________________________________
+Test Cases planned | Test Cases executed | TCs Pass  | TCs Failed     |
+______________________________________________________________________
+    13             |         13          |    11     |     2          |
+______________________________________________________________________
+
+c) No of defects identified and their Status & Severity
+
+_______________________________________________________________________
+          | Critical |  Major  |  Medium |  Minor |  Total            |
+______________________________________________________________________|
+Closed    |   0      |   0     |    0    |   0    |    0              |
+______________________________________________________________________
+Open      |   0      |   0     |    1    |   3    |    4              |
+______________________________________________________________________

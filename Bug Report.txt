@@ -1,0 +1,64 @@
+
+BUG #1 ( Linked to BASIC OPERATIONAL TESTS)
+Visibility Issue: User able to enter infinite numbers to the input field and do calculation but result is not visible 
+after certain number of digits.
+
+Step to reproduce:
+
+1. Enter 21 digits i.e. enter 100000000000000000123 and do calculation division by 2
+
+Actual: It displayed 500000000000000000 that is not correct. 
+
+------------------------------------------------------------------------------------------------------------------------
+
+BUG #2 ( linked to FUNCTIONALITY TEST CASES/Test Case 6: DELETE BUTTON ).
+Issue: When user do calculation ( addition/subtraction or so on ) and use DEL button at the end to delete result from output,
+it deleted also and some number from input field.
+
+Steps to reproduce:
+
+
+Step 1.    Select and enter '5' in input field.
+Step 2.    Click 'PLUS' button.              
+Step 3.    Select '8' and click on it.
+Step 4,    Click on 'EQ' button.
+Step 5.    Click on DEL button 
+
+Expected: should only delete output and display '5+8'
+
+Actual:   deleted output and last input ( i.e. displayed '5+'           
+
+ 									                                                     
+------------------------------------------------------------------------------------------------------------------------
+
+BUG #3 ( linked to FUNCTIONALITY TEST CASES/Test Case 4: Division ).
+Usability issue: When user divide a number by another number that exceed 6 digits, the result is not displayed correctly, see screenshot.
+
+Steps to reproduce:
+
+
+Step 1. Select'1' and click on it                  
+Step 2.    Click division button  "DIV".
+Step 3. Click on 7 times on "5" to enter '5555555' into input field.          |
+Step 4.    Click on 'EQ' 
+
+Expected: result should be rounded and display value in decimal format or other format specified in BRD
+Actual: results looks weird, see attached screenshot                   
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+BUG #4 ( linked to FUNCTIONALITY TEST CASES/Test Case 5: Division by zero ).
+Issue: Error message should b edisplayed When user divide a number by zero.
+
+Steps to reproduce:
+
+
+Step 1. Select numner and enter into input field ( i.e. '5')                   
+Step 2.     Click division button DIV.
+Step 3. Select'0' and click on it.            
+Step 4.    Click on 'EQ'                  
+
+Expected: Should displayed an error message (i.e."ERR").
+
+Actual: 'Infinity' is displayed		                  
